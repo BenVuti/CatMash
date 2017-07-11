@@ -1,0 +1,13 @@
+<p>
+  cat-mash works!
+</p>
+<div class="content-fluid container"> 
+  <div class="row" *ngIf="mash">
+    <div class="col-6" (click)="voteOnCat(mash.leftCat, mash.rightCat)">
+      <img class="img-fluid rounded-circle" src={{mash.leftCat.imageSource}}>
+    </div>
+    <div class="col-6" (click)="voteOnCat(mash.rightCat, mash.leftCat)">
+      <img class="img-fluid rounded-circle" src={{mash.rightCat.imageSource}}>
+    </div>
+  </div>
+</div>
