@@ -5,6 +5,9 @@ import { NgbModule }     from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent }  from './app.component';
 import { HttpModule }    from '@angular/http';
  
+import { CatMashService } from './cat-mash.service';
+import { CatMashComponent } from './cat-mash/cat-mash.component';
+
 @NgModule({
   imports: [
     NgbModule.forRoot(),
@@ -13,8 +16,10 @@ import { HttpModule }    from '@angular/http';
     FormsModule
   ],
   declarations: [
-    AppComponent
+    AppComponent,
+    CatMashComponent,
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ AppComponent ],
+  providers: [ CatMashService ]
 })
 export class AppModule { }
